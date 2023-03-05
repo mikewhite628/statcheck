@@ -10,7 +10,9 @@
 
   onMount(async () => {
     if (!$apiData.id) {
-      fetch(`http://localhost:3000/api/summoner/${summonerName}`)
+      fetch(
+        `https://statcheck-server-production.up.railway.app/api/summoner/${summonerName}`
+      )
         .then((response) => response.json())
         .then((data) => {
           apiData.set(data);
@@ -26,7 +28,9 @@
   });
 
   async function searchName() {
-    fetch(`http://localhost:3000/api/summoner/${summonerName}`)
+    fetch(
+      `https://statcheck-server-production.up.railway.app/api/summoner/${summonerName}`
+    )
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
@@ -35,7 +39,9 @@
         console.log(`apiData: ${$apiData}`);
       })
       .then(() => {
-        fetch(`http://localhost:3000/api/rank?summonerId=${$apiData.id}`)
+        fetch(
+          `https://statcheck-server-production.up.railway.app/api/rank?summonerId=${$apiData.id}`
+        )
           .then((response) => response.json())
           .then((data) => {
             rankedData.set(data);

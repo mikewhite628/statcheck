@@ -48,7 +48,9 @@
   async function checkSlug() {
     if ($page.params.slug !== $apiData.name) {
       console.log("slug not equal to apiData.name");
-      fetch(`http://localhost:3000/api/summoner/${$page.params.slug}`)
+      fetch(
+        `https://statcheck-server-production.up.railway.app/api/summoner/${$page.params.slug}`
+      )
         .then((response) => response.json())
         .then((data) => {
           apiData.set(data);
@@ -65,7 +67,9 @@
   }
 
   async function fetchDetailsData() {
-    fetch(`http://localhost:3000/api/matches?puuid=${$apiData.puuid}`)
+    fetch(
+      `https://statcheck-server-production.up.railway.app/api/matches?puuid=${$apiData.puuid}`
+    )
       .then((response) => response.json())
       .then((data) => {
         matchIds.set(data);
@@ -89,7 +93,9 @@
   async function fetchMatchDetails() {
     if (!loaded) {
       for (let i = 0; i < $matchIds.length; i++) {
-        fetch(`http://localhost:3000/api/matchdetails?matchId=${$matchIds[i]}`)
+        fetch(
+          `https://statcheck-server-production.up.railway.app/api/matchdetails?matchId=${$matchIds[i]}`
+        )
           .then((response) => response.json())
           .then((data) => {
             $matchData = [...$matchData, data];
@@ -106,7 +112,9 @@
 
   //fetch rank and tier
   async function fetchRank() {
-    fetch(`http://localhost:3000/api/rank?summonerId=${$apiData.id}`)
+    fetch(
+      `https://statcheck-server-production.up.railway.app/api/rank?summonerId=${$apiData.id}`
+    )
       .then((response) => response.json())
       .then((data) => {
         rankedData.set(data);
