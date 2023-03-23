@@ -86,10 +86,12 @@
     </div>
 
     {#if notFound == "true"}
-      <h2>Summoner Not Found</h2>
+      <h2 class="search-name">Summoner Not Found</h2>
     {:else}
       <div class="summonerInfo">
-        <a href="/details/{$apiData.name}"><h2>{$apiData.name}</h2></a>
+        <a href="/details/{$apiData.name}"
+          ><h2 class="search-name">{$apiData.name}</h2></a
+        >
         <h3>Summoner Level: {$apiData.summonerLevel}</h3>
 
         <img src={icon} alt="Summoner Icon" />
@@ -159,6 +161,10 @@
     background-color: #45a049;
   }
 
+  .search-name {
+    margin-bottom: 0;
+  }
+
   .summonerInfo {
     display: flex;
     flex-direction: column;
@@ -170,7 +176,8 @@
 
   @media (max-width: 500px) {
     .search {
-      width: inherit;
+      width: 95%;
+      margin: auto;
     }
   }
 </style>

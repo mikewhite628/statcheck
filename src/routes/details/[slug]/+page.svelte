@@ -273,5 +273,8 @@
       margin-top: 48px;
       text-align: center;
     }
+    .matches {
+      width: 95%;
+    }
   }
 </style>
