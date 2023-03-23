@@ -21,7 +21,9 @@
 <div class="container">
   <div class="wrapper">
     <div class="transparent-layer" />
-    <h1>League of Legends</h1>
+
+    <h1 class="banner-text">LoL Skill Check</h1>
+
     <div
       class="champ-img"
       style="background-image: url(http://ddragon.leagueoflegends.com/cdn/img/champion/splash/{randomChamp})"
@@ -60,6 +62,15 @@
   }
   h1 {
     position: absolute;
+  }
+  .banner-text-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
   }
   .champ-img {
     width: 100vw;

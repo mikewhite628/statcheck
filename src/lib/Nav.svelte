@@ -32,7 +32,7 @@
   nav {
     background-color: #333;
     color: #fff;
-    padding: 1rem;
+
     width: 100vw;
     display: flex;
     justify-content: space-between;
@@ -45,6 +45,7 @@
     list-style: none;
     margin: 0;
     padding: 0;
+    padding: 1rem;
   }
 
   nav li {

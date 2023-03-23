@@ -145,7 +145,7 @@
   <meta name="description" content="Details" />
 </svelte:head>
 
-<main>
+<main class="matches">
   <div class="wrapper">
     {#await $matchData}
       <Jumper />

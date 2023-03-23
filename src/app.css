@@ -61,8 +61,8 @@ main {
   align-items: center;
   justify-content: center;
   flex: 1;
-  padding: 0 2em;
   min-height: 100vh;
+  width: 100%;
 }
 
 button {
@@ -99,6 +99,11 @@ button:focus-visible {
 
 @media (max-width: 500px) {
   main {
-    padding: 0 1em;
+  }
+}
+
+@media (max-width: 575px) {
+  .banner-text {
+    font-size: 2.1rem !important;
   }
 }
