@@ -1,5 +1,6 @@
 <script>
   import Nav from "$lib/Nav.svelte";
+
   import { apiData } from "../store.js";
   import { onMount, afterUpdate, onDestroy } from "svelte";
   import { browser } from "$app/environment";
