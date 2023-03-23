@@ -240,6 +240,7 @@
 
   .left-column {
     width: 275px;
+    margin-left: 24px;
   }
 
   .name-and-rank {
@@ -248,6 +249,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .matches {
+    width: 90%;
+    margin: auto;
   }
 
   @media (max-width: 991px) {
@@ -273,8 +279,8 @@
       margin-top: 48px;
       text-align: center;
     }
-    .matches {
-      width: 95%;
+    .left-column {
+      margin: auto;
     }
   }
 </style>
