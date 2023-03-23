@@ -7,17 +7,17 @@
 </script>
 
 <div>
-  {#await mostPlayedData}
+  {#if champ && loaded}
     <div class="container">
       <div class="wrapper">
         <div class="transparent-layer" />
         <div
           class="champ-img"
-          style="https://github.com/InFinity54/LoL_DDragon/blob/master/img/champion/splash/{champ.champ}_0.jpg"
+          style="background-image: url(http://ddragon.leagueoflegends.com/cdn/img/champion/splash/{champ.champ}_0.jpg)"
         />
       </div>
     </div>
-  {/await}
+  {/if}
 </div>
 
 <style>
