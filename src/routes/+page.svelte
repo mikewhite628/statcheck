@@ -82,7 +82,9 @@
         on:keydown={onKeyDown}
         placeholder="Enter Summoner Name"
       />
-      <button on:click={searchName} on:keydown={onkeydown}>Search</button>
+      <button class="search-btn" on:click={searchName} on:keydown={onkeydown}
+        >Search</button
+      >
     </div>
 
     {#if notFound == "true"}
@@ -176,7 +178,7 @@
 
   @media (max-width: 500px) {
     .search {
-      width: 95%;
+      width: 85%;
       margin: auto;
     }
   }
