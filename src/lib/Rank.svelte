@@ -1,7 +1,5 @@
 <script>
   import { rankedData } from "../store";
-
-  console.log($rankedData);
 </script>
 
 {#each $rankedData as rank}

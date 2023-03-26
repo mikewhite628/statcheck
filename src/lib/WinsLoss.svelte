@@ -15,7 +15,7 @@
         }
       }
     }
-    console.log(`wins: ${wins}`);
+
     return { wins, losses };
   }
 

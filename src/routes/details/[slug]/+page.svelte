@@ -47,14 +47,13 @@
 
   async function checkSlug() {
     if ($page.params.slug !== $apiData.name) {
-      console.log("slug not equal to apiData.name");
       fetch(
         `https://statcheck-server-production.up.railway.app/api/summoner/${$page.params.slug}`
       )
         .then((response) => response.json())
         .then((data) => {
           apiData.set(data);
-          console.log(`apiData: ${$apiData}`);
+
           fetchDetailsData();
         })
         .catch((error) => {
@@ -73,7 +72,7 @@
       .then((response) => response.json())
       .then((data) => {
         matchIds.set(data);
-        console.log($matchIds);
+
         fetchMatchDetails();
         fetchRank();
       })
@@ -99,7 +98,7 @@
           .then((response) => response.json())
           .then((data) => {
             $matchData = [...$matchData, data];
-            console.log($matchData);
+
             sortByDate();
           })
           .catch((error) => {

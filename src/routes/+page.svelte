@@ -16,7 +16,6 @@
         .then((response) => response.json())
         .then((data) => {
           apiData.set(data);
-          console.log(`apiData: ${$apiData}`);
         })
         .catch((error) => {
           console.log(error);
@@ -33,10 +32,8 @@
     )
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         apiData.set(data);
         notFound = "false";
-        console.log(`apiData: ${$apiData}`);
       })
       .then(() => {
         fetch(
