@@ -17,7 +17,7 @@
     if (browser) {
       let ses = window.sessionStorage.getItem("store");
       if (ses) {
-        console.log("sob-- ~ loading ses", ses);
+        // console.log("sob-- ~ loading ses", ses);
         $apiData = JSON.parse(ses);
       }
       savestore = true;

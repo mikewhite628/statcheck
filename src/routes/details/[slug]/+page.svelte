@@ -117,7 +117,6 @@
       .then((response) => response.json())
       .then((data) => {
         rankedData.set(data);
-        console.log(data);
       })
       .catch((error) => {
         console.log(error);
